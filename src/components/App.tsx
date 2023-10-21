@@ -1,6 +1,7 @@
 import { FC } from 'react'
-import { Box } from './Box/Box'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './router/router'
 
 export const App: FC = () => {
-	return <Box>React homework template</Box>
+	return <RouterProvider router={router} />
 }
