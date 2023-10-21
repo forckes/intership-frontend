@@ -2,9 +2,9 @@ import { createBrowserRouter } from 'react-router-dom'
 import Header from '../Header/Header'
 import { ErrorView } from '../ErrorView/ErrorView'
 import Home from '../../pages/Home/Home'
-import Deals from '../../pages/Deals'
-import Register from '../../pages/Register'
-import LogIn from '../../pages/LogIn'
+import Deals from '../../pages/Deals/Deals'
+import Register from '../../pages/Register/Register'
+import LogIn from '../../pages/LogIn/LogIn'
 
 export const router = createBrowserRouter([
 	{
