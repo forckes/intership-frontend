@@ -1,27 +1,47 @@
 import { FC } from 'react'
 import { Box } from '../Box/Box'
+import styled from 'styled-components'
 import { Outlet } from 'react-router-dom'
-import { NavLink } from 'react-router-dom'
-import { AiFillHome } from 'react-icons/ai'
-import { MdApartment } from 'react-icons/md'
+import { HeaderContainer, LogIn, NavContainer, SignUp } from './Header.styled'
+import { Link } from 'react-router-dom'
+
+const Logo = styled(Link)`
+	text-decoration: none;
+	color: #fff;
+	font-size: 32px;
+	font-weight: 300;
+	font-family: 'Merriweather', serif;
+`
+const Nav = styled(Link)`
+	text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	font-weight: 300;
+	font-family: 'Merriweather', serif;
+	transition: color 0.1s ease;
+	&:hover {
+		color: #ab7c2a;
+	}
+`
 
 const Header: FC = () => {
 	return (
 		<>
-			<div>
+			<HeaderContainer>
 				<div>
-					<NavLink to='/'>
-						<AiFillHome size={30} />
-					</NavLink>
-
-					<div>
-						<NavLink to='/deals'>
-							<MdApartment size={30} />
-							Deals
-						</NavLink>
-					</div>
+					<Logo to='/'>TRULY</Logo>
 				</div>
-			</div>
+				<NavContainer>
+					<Nav to='/'>Home</Nav>
+					<Nav to='/deals'>Deals</Nav>
+				</NavContainer>
+				<div>
+					<LogIn>Log In</LogIn>
+					<SignUp>Sign Up</SignUp>
+				</div>
+			</HeaderContainer>
 			<Box>
 				<Outlet />
 			</Box>
