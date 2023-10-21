@@ -5,7 +5,7 @@ import {
 } from '../../store/user/user.interface'
 import Cookies from 'js-cookie'
 import { saveToStorage } from './auth.helper'
-import { axiosClassic, instance } from '../../api/api.interceptor'
+import { axiosClassic } from '../../api/api.interceptor'
 import { REFRESH_TOKEN } from '../../constants/token.constants'
 
 export const AuthService = {
