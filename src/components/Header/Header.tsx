@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { Box } from '../Box/Box'
 import styled from 'styled-components'
 import { Outlet } from 'react-router-dom'
 import { HeaderContainer, LogIn, NavContainer, SignUp } from './Header.styled'
@@ -42,9 +41,9 @@ const Header: FC = () => {
 					<SignUp>Sign Up</SignUp>
 				</div>
 			</HeaderContainer>
-			<Box>
+			<div>
 				<Outlet />
-			</Box>
+			</div>
 		</>
 	)
 }
