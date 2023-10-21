@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import Header from '../Header/Header'
 import { ErrorView } from '../ErrorView/ErrorView'
-import Home from '../../pages/Home'
+import Home from '../../pages/Home/Home'
 import Deals from '../../pages/Deals'
 import Register from '../../pages/Register'
 import { LogIn } from '../Header/Header.styled'
