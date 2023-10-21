@@ -14,7 +14,7 @@ export interface IInitialState {
 	isLoading: boolean
 }
 
-export interface IEmailPassword {
+export interface ILogin {
 	email: string
 	password: string
 }

@@ -1,12 +1,12 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { IAuthResponse, IEmailPassword, IRegister } from './user.interface'
-import AuthService from '@/services/auth/auth.service'
-import { removeFromStorage } from '@/services/auth/auth.helper'
-import { errorCatch } from '@/api/api.helper'
+import { IAuthResponse, ILogin, IRegister } from './user.interface'
+import AuthService from '../../services/auth/auth.service'
+import { removeFromStorage } from '../../services/auth/auth.helper'
+import { errorCatch } from '../../api/api.helper'
 
 export const register = createAsyncThunk<IAuthResponse, IRegister>(
 	'auth/register',
-	async (data, thunkApi) => {
+	async (data: IRegister, thunkApi) => {
 		try {
 			const response = await AuthService.main('register', data)
 			return response
@@ -16,9 +16,9 @@ export const register = createAsyncThunk<IAuthResponse, IRegister>(
 	}
 )
 
-export const login = createAsyncThunk<IAuthResponse, IEmailPassword>(
+export const login = createAsyncThunk<IAuthResponse, ILogin>(
 	'auth/login',
-	async (data, thunkApi) => {
+	async (data: ILogin, thunkApi) => {
 		try {
 			const response = await AuthService.main('login', data)
 			return response
@@ -28,7 +28,7 @@ export const login = createAsyncThunk<IAuthResponse, IEmailPassword>(
 	}
 )
 
-export const logout = createAsyncThunk('auth/logout', async () => {
+export const logout = createAsyncThunk<void>('auth/logout', async () => {
 	removeFromStorage()
 })
 
