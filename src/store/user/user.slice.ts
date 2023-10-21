@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { IInitialState } from './user.interface'
 import { checkAuth, login, logout, register } from './user.actions'
-import { getStoreLocal } from '@/utils/local-storage'
+import { getStoreLocal } from '../../utils/local-storage'
 
 const initialState: IInitialState = {
 	user: getStoreLocal('user'),
