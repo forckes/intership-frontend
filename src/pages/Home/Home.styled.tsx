@@ -8,13 +8,13 @@ export const Container = styled.div`
 	align-items: center;
 	color: #fff;
 	flex-direction: column;
-	background-image: url('images/bg.png');
+	background-image: url('images/bg.png') !important ;
 	background-size: cover;
 	background-position: center;
 	width: 100vw;
 	overflow: hidden;
 	margin: 0;
-	position: relative; /* Add position relative to establish a stacking context */
+	position: relative;
 	padding: 0;
 	&:before {
 		content: '';
