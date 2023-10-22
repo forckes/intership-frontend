@@ -24,6 +24,7 @@ const Header: FC = () => {
 		logout()
 		window.location.reload()
 	}
+	console.log(profile)
 	return (
 		<>
 			<HeaderContainer>

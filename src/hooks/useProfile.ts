@@ -15,9 +15,7 @@ export const useProfile = () => {
 				const response = await UserService.getProfile()
 				const profileData = response.data
 				dispatch(getProfileSuccess(profileData))
-			} catch (error) {
-				// Handle error
-			}
+			} catch (error) {}
 		}
 
 		if (user) {
