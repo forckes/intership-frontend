@@ -11,7 +11,7 @@ const ProtectedRoute: FC<Props> = ({ children }) => {
 	const { user } = useAuth()
 
 	useEffect(() => {
-		if (user) {
+		if (!user) {
 			navigate('/login', { replace: true })
 		}
 	}, [user, navigate])

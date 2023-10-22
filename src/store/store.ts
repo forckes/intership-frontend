@@ -23,7 +23,8 @@ const combinedReducers = combineReducers({
 
 const persistConfig = {
 	key: 'internship',
-	storage
+	storage,
+	blacklist: ['user', 'profile', profileApi.reducerPath]
 }
 
 let mainReducer = persistReducer(persistConfig, combinedReducers)

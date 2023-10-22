@@ -8,8 +8,16 @@ import {
 	Logo,
 	Nav
 } from './Header.styled'
+import { useProfile } from '../../hooks/useProfile'
+import { useActions } from '../../hooks/useActions'
 
 const Header: FC = () => {
+	const { profile } = useProfile()
+	const { logout } = useActions()
+	const logoutFunction = () => {
+		logout()
+		window.location.reload()
+	}
 	return (
 		<>
 			<HeaderContainer>
@@ -20,10 +28,17 @@ const Header: FC = () => {
 					<Nav to='/'>Home</Nav>
 					<Nav to='/deals'>Deals</Nav>
 				</NavContainer>
-				<div>
-					<LogInButton to='login'>Log In</LogInButton>
-					<SignUpButton to='register'>Sign Up</SignUpButton>
-				</div>
+				{profile ? (
+					<>
+						<button onClick={logoutFunction}>LogOut</button>
+						<img src={profile.avatarPath} alt='' />
+					</>
+				) : (
+					<div>
+						<LogInButton to='login'>Log In</LogInButton>
+						<SignUpButton to='register'>Sign Up</SignUpButton>
+					</div>
+				)}
 			</HeaderContainer>
 			<div>
 				<Outlet />
