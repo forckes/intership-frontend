@@ -6,6 +6,7 @@ import Deals from '../../pages/Deals/Deals'
 import Register from '../../pages/Register/Register'
 import LogIn from '../../pages/LogIn/LogIn'
 import ProtectedRoute from '../ProtectedRoute'
+import Profile from '../../pages/Profile/Profile'
 
 export const router = createBrowserRouter([
 	{
@@ -22,6 +23,14 @@ export const router = createBrowserRouter([
 				element: (
 					<ProtectedRoute>
 						<Deals />
+					</ProtectedRoute>
+				)
+			},
+			{
+				path: 'profile',
+				element: (
+					<ProtectedRoute>
+						<Profile />
 					</ProtectedRoute>
 				)
 			},
