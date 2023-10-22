@@ -17,6 +17,10 @@ export const Label = styled.span`
 	font-weight: 700;
 	line-height: 20px;
 	margin-bottom: 4px;
+	@media (max-width: 1100px) {
+		font-size: 14px;
+		font-weight: 500;
+	}
 `
 
 export const Input = styled.input`
@@ -35,6 +39,9 @@ export const Input = styled.input`
 		font-size: 14px;
 		font-weight: 400;
 		line-height: 22px;
+	}
+	@media (max-width: 500px) {
+		width: 250px;
 	}
 `
 export const Error = styled.div`

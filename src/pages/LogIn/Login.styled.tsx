@@ -3,11 +3,18 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
 	display: flex;
+	@media (max-width: 1024px) {
+		justify-content: center;
+		align-items: center;
+	}
 `
 
 export const ImageContainer = styled.div`
 	max-width: 100vw;
 	flex: 0 1 50%;
+	@media (max-width: 1024px) {
+		display: none;
+	}
 `
 export const ImageComp = styled.img`
 	min-height: calc(100vh - 72px);
@@ -21,6 +28,10 @@ export const FormContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	@media (max-width: 1024px) {
+		margin-top: 50px;
+		flex: 0;
+	}
 `
 
 export const Form = styled.form`
@@ -28,6 +39,9 @@ export const Form = styled.form`
 	flex-direction: column;
 	justify-content: center;
 	align-items: start;
+	@media (max-width: 1024px) {
+		align-items: center;
+	}
 `
 
 export const Title = styled.h1`
@@ -37,6 +51,9 @@ export const Title = styled.h1`
 	font-weight: 700;
 	line-height: 34px;
 	font-family: 'Merriweather', serif;
+	@media (max-width: 1100px) {
+		font-size: 30px;
+	}
 `
 
 export const SignInButton = styled.button`
@@ -73,6 +90,9 @@ export const ForgotPassword = styled.span`
 	justify-content: end;
 	&:hover {
 		color: #ab7c2a;
+	}
+	@media (max-width: 500px) {
+		font-size: 14px;
 	}
 `
 
