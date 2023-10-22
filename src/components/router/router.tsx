@@ -45,6 +45,6 @@ export const router = createBrowserRouter(
 				}
 			]
 		}
-	],
-	{ basename: 'https://forckes.github.io/intership-frontend' }
+	]
+	// { basename: '' }
 )
