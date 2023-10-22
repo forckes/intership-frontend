@@ -36,6 +36,18 @@ export const Title = styled.h1`
 	font-weight: 700;
 	line-height: 80px;
 	z-index: 2;
+	@media (max-width: 800px) {
+		font-size: 46px;
+		line-height: 52px;
+	}
+	@media (max-width: 600px) {
+		font-size: 36px;
+		line-height: 46px;
+	}
+	@media (max-width: 400px) {
+		font-size: 30px;
+		line-height: 38px;
+	}
 `
 
 export const Text = styled.h1`
@@ -48,6 +60,21 @@ export const Text = styled.h1`
 	letter-spacing: -0.48px;
 	margin-top: -30px;
 	z-index: 2;
+	max-width: 822px;
+	@media (max-width: 800px) {
+		font-size: 18px;
+		line-height: 26px;
+	}
+	@media (max-width: 600px) {
+		font-size: 16px;
+		line-height: 24px;
+		margin-top: -20px;
+	}
+	@media (max-width: 500px) {
+		font-size: 16px;
+		line-height: 24px;
+		margin-top: -10px;
+	}
 `
 export const Button = styled(Link)`
 	border-radius: 8px;
