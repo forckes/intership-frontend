@@ -18,11 +18,14 @@ import { ILogin } from '../../store/user/user.interface'
 import { validEmail } from '../../utils/valid-email'
 import Field from '../../components/Field/Field'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
+import { useAuth } from '../../hooks/useAuth'
+import { Oval } from 'react-loader-spinner'
 
 const LogIn: FC = () => {
 	useAuthRedirect()
 	const { login } = useActions()
 	const { error } = useTypedSelector(state => state.user)
+	const { isLoading } = useAuth()
 
 	const {
 		register: formRegister,
@@ -45,6 +48,20 @@ const LogIn: FC = () => {
 			</ImageContainer>
 			<FormContainer>
 				<form onSubmit={handleSubmit(onSubmit)}>
+					{isLoading && (
+						<Oval
+							height={80}
+							width={80}
+							color='#ab7c2a'
+							wrapperStyle={{ marginTop: '10px' }}
+							wrapperClass=''
+							visible={true}
+							ariaLabel='oval-loading'
+							secondaryColor='#ab7c2a'
+							strokeWidth={3}
+							strokeWidthSecondary={2}
+						/>
+					)}
 					<Title>Login</Title>
 					<Field
 						{...formRegister('email', {
