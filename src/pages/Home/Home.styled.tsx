@@ -26,6 +26,10 @@ export const Container = styled.div`
 		width: 100%;
 		height: 100%;
 	}
+	@media (max-width: 800px) {
+		font-size: 46px;
+		line-height: 52px;
+	}
 `
 
 export const Title = styled.h1`
@@ -47,6 +51,9 @@ export const Title = styled.h1`
 	@media (max-width: 400px) {
 		font-size: 30px;
 		line-height: 38px;
+	}
+	@media (max-width: 340px) {
+		margin-top: 0px;
 	}
 `
 
