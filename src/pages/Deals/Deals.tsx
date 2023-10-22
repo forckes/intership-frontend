@@ -35,22 +35,20 @@ const Deals: FC = () => {
 			<Title>Open Deals</Title>
 			<Content>
 				{deals.map(deal => (
-					<Link to={`/deals/${deal.id}`} key={deal.id}>
-						<Deal>
-							<Image src={deal.images[0]} alt='Deal' />
-							<Info>
-								<DealTitle>{deal.title}</DealTitle>
-								<Options>
-									{deal.options.map(option => (
-										<Option key={option.id}>
-											<div>{option.label}</div>
-											<div>{option.value}</div>
-										</Option>
-									))}
-								</Options>
-							</Info>
-						</Deal>
-					</Link>
+					<Deal>
+						<Image src={deal.images[0]} alt='Deal' />
+						<Info>
+							<DealTitle>{deal.title}</DealTitle>
+							<Options>
+								{deal.options.map(option => (
+									<Option key={option.id}>
+										<div>{option.label}</div>
+										<div>{option.value}</div>
+									</Option>
+								))}
+							</Options>
+						</Info>
+					</Deal>
 				))}
 			</Content>
 		</DealsContainer>
