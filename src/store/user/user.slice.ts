@@ -5,7 +5,8 @@ import { getStoreLocal } from '../../utils/local-storage'
 
 const initialState: IInitialState = {
 	user: getStoreLocal('user'),
-	isLoading: false
+	isLoading: false,
+	error: null
 }
 
 export const userSlice = createSlice({
@@ -35,6 +36,7 @@ export const userSlice = createSlice({
 			.addCase(login.rejected, state => {
 				state.isLoading = false
 				state.user = null
+				state.error = login.rejected.type
 			})
 			.addCase(logout.fulfilled, state => {
 				state.isLoading = false

@@ -12,6 +12,7 @@ export interface ITokens {
 export interface IInitialState {
 	user: IUserState | null
 	isLoading: boolean
+	error: any
 }
 
 export interface ILogin {
