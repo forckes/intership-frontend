@@ -10,7 +10,10 @@ import {
 	LogOutButton,
 	AsideButtons,
 	AvatarProfile,
-	Hello
+	Hello,
+	LogOutButtonText,
+	NavHome,
+	AuthButtons
 } from './Header.styled'
 import { useProfile } from '../../hooks/useProfile'
 import { useActions } from '../../hooks/useActions'
@@ -32,7 +35,7 @@ const Header: FC = () => {
 					<Logo to='/'>TRULY</Logo>
 				</div>
 				<NavContainer>
-					<Nav to='/'>Home</Nav>
+					<NavHome to='/'>Home</NavHome>
 					<Nav to='/deals'>Deals</Nav>
 				</NavContainer>
 				{profile ? (
@@ -42,15 +45,15 @@ const Header: FC = () => {
 							<AvatarProfile src={profile.avatarPath} alt='Profile Avatar' />
 						</Link>
 						<LogOutButton onClick={logoutFunction}>
-							Log Out
-							<BiLogIn size={22} />
+							<LogOutButtonText> Log Out</LogOutButtonText>
+							<BiLogIn size={26} />
 						</LogOutButton>
 					</AsideButtons>
 				) : (
-					<div>
+					<AuthButtons>
 						<LogInButton to='login'>Log In</LogInButton>
 						<SignUpButton to='register'>Sign Up</SignUpButton>
-					</div>
+					</AuthButtons>
 				)}
 			</HeaderContainer>
 			<div>
