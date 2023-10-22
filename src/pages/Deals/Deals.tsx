@@ -34,7 +34,7 @@ const Deals: FC = () => {
 			<Title>Open Deals</Title>
 			<Content>
 				{deals.map(deal => (
-					<Deal>
+					<Deal key={deal.id}>
 						<Image src={deal.images[0]} alt='Deal' />
 						<Info>
 							<DealTitle>{deal.title}</DealTitle>
