@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -47,4 +48,23 @@ export const Text = styled.h1`
 	letter-spacing: -0.48px;
 	margin-top: -30px;
 	z-index: 2;
+`
+export const Button = styled(Link)`
+	border-radius: 8px;
+	margin-top: 20px;
+	font-family: 'Merriweather', serif;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 34px;
+	border: 1px solid #fff;
+	text-decoration: none;
+	cursor: pointer;
+	color: #fff;
+	z-index: 2;
+	padding: 10px 24px 10px 24px;
+	transition: background-color 0.2s ease;
+	&:hover {
+		background-color: #ffffff6a;
+	}
 `
