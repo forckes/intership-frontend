@@ -36,14 +36,6 @@ export const router = createBrowserRouter([
 				)
 			},
 			{
-				path: 'deals/:dealId',
-				element: (
-					<ProtectedRoute>
-						<DealPage />
-					</ProtectedRoute>
-				)
-			},
-			{
 				path: 'login',
 				element: <LogIn />
 			},
