@@ -6,10 +6,16 @@ import {
 	NavContainer,
 	SignUpButton,
 	Logo,
-	Nav
+	Nav,
+	LogOutButton,
+	AsideButtons,
+	AvatarProfile,
+	Hello
 } from './Header.styled'
 import { useProfile } from '../../hooks/useProfile'
 import { useActions } from '../../hooks/useActions'
+import { BiLogIn } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
 
 const Header: FC = () => {
 	const { profile } = useProfile()
@@ -29,10 +35,16 @@ const Header: FC = () => {
 					<Nav to='/deals'>Deals</Nav>
 				</NavContainer>
 				{profile ? (
-					<>
-						<button onClick={logoutFunction}>LogOut</button>
-						<img src={profile.avatarPath} alt='' />
-					</>
+					<AsideButtons>
+						<Hello>Hi, {profile.name}!</Hello>
+						<Link to='/profile'>
+							<AvatarProfile src={profile.avatarPath} alt='Profile Avatar' />
+						</Link>
+						<LogOutButton onClick={logoutFunction}>
+							Log Out
+							<BiLogIn size={22} />
+						</LogOutButton>
+					</AsideButtons>
 				) : (
 					<div>
 						<LogInButton to='login'>Log In</LogInButton>

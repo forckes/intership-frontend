@@ -77,3 +77,46 @@ export const Nav = styled(Link)`
 		color: #ab7c2a;
 	}
 `
+export const LogOutButton = styled.button`
+	padding: 8px 30px 8px 30px;
+	color: #fff;
+	border-radius: 4px;
+	border: 1px solid #b29f7e;
+	background-color: #b29f7e;
+	font-family: 'Merriweather', serif;
+	font-size: 16px;
+	cursor: pointer;
+	font-weight: 700;
+	line-height: 22px;
+	transition: all 0.2s ease;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	&:hover {
+		border: 1px solid #ab7c2a;
+		background-color: #ab7c2a;
+	}
+`
+
+export const AsideButtons = styled.div`
+	display: flex;
+	gap: 20px;
+	align-items: center;
+`
+
+export const AvatarProfile = styled.img`
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+	padding: 4px;
+	border: 2px solid #b29f7e;
+	&:hover {
+		border: 2px solid #ab7c2a;
+	}
+`
+
+export const Hello = styled.span`
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+`
