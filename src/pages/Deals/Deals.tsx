@@ -12,7 +12,6 @@ import {
 } from './Deals.styled'
 import { IDeal } from '../../types/deal.interface'
 import { DealsService } from '../../services/deals.service'
-import { Link } from 'react-router-dom'
 
 const Deals: FC = () => {
 	const [deals, setDeals] = useState<IDeal[]>([])
