@@ -8,40 +8,43 @@ import LogIn from '../../pages/LogIn/LogIn'
 import ProtectedRoute from '../ProtectedRoute'
 import Profile from '../../pages/Profile/Profile'
 
-export const router = createBrowserRouter([
-	{
-		path: '/',
-		element: <Header />,
-		errorElement: <ErrorView />,
-		children: [
-			{
-				index: true,
-				element: <Home />
-			},
-			{
-				path: 'deals',
-				element: (
-					<ProtectedRoute>
-						<Deals />
-					</ProtectedRoute>
-				)
-			},
-			{
-				path: 'profile',
-				element: (
-					<ProtectedRoute>
-						<Profile />
-					</ProtectedRoute>
-				)
-			},
-			{
-				path: 'login',
-				element: <LogIn />
-			},
-			{
-				path: 'register',
-				element: <Register />
-			}
-		]
-	}
-])
+export const router = createBrowserRouter(
+	[
+		{
+			path: '/',
+			element: <Header />,
+			errorElement: <ErrorView />,
+			children: [
+				{
+					index: true,
+					element: <Home />
+				},
+				{
+					path: 'deals',
+					element: (
+						<ProtectedRoute>
+							<Deals />
+						</ProtectedRoute>
+					)
+				},
+				{
+					path: 'profile',
+					element: (
+						<ProtectedRoute>
+							<Profile />
+						</ProtectedRoute>
+					)
+				},
+				{
+					path: 'login',
+					element: <LogIn />
+				},
+				{
+					path: 'register',
+					element: <Register />
+				}
+			]
+		}
+	],
+	{ basename: 'https://forckes.github.io/intership-frontend' }
+)
