@@ -11,9 +11,9 @@ export const DealsService = {
 		})
 	},
 
-	async getById(id: string | number) {
+	async getById(dealId: string | undefined) {
 		return instance<IDeal>({
-			url: `${DEALS}/${id}`,
+			url: `${DEALS}/${dealId}`,
 			method: 'GET'
 		})
 	}
