@@ -1,5 +1,4 @@
 'use client'
-import { useAuth } from '../../hooks/useAuth'
 import { FC } from 'react'
 import { useProfile } from '../../hooks/useProfile'
 import {
