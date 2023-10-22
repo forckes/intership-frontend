@@ -7,6 +7,7 @@ import Register from '../../pages/Register/Register'
 import LogIn from '../../pages/LogIn/LogIn'
 import ProtectedRoute from '../ProtectedRoute'
 import Profile from '../../pages/Profile/Profile'
+import DealPage from '../../pages/DealPage/DealPage'
 
 export const router = createBrowserRouter([
 	{
@@ -31,6 +32,14 @@ export const router = createBrowserRouter([
 				element: (
 					<ProtectedRoute>
 						<Profile />
+					</ProtectedRoute>
+				)
+			},
+			{
+				path: 'deals/:dealId',
+				element: (
+					<ProtectedRoute>
+						<DealPage />
 					</ProtectedRoute>
 				)
 			},
